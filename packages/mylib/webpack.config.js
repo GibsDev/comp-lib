@@ -18,15 +18,18 @@ module.exports = {
         rules: [
             {
                 test: /\.[tj]sx?$/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: [
-                            '@babel/preset-env',
-                            ['@babel/preset-react', { runtime: 'automatic' }]
-                        ]
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: [
+                                '@babel/preset-env',
+                                ['@babel/preset-react', { runtime: 'automatic' }]
+                            ]
+                        }
                     }
-                },
+                ],
             }
         ],
     },
