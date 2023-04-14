@@ -1,5 +1,4 @@
 const path = require('path');
-// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const dist = path.resolve(__dirname, 'dist');
 
